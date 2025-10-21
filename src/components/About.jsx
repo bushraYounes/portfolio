@@ -1,7 +1,4 @@
-import React from 'react'
-import { Briefcase, Code, User } from "lucide-react";
-import girl2 from "../assets/girl2.png"
-import girl3 from "../assets/girl3.png"
+
 import girlred from "../assets/red_girl.png"
 const About = () => {
   return (

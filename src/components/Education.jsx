@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Briefcase, Code, User } from "lucide-react";
 import svu from "../assets/svut.png"
 import hiast from "../assets/hiastH.png"
 import ncd from "../assets/ncdt.png"

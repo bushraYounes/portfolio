@@ -8,7 +8,7 @@ import {
     Phone,
     Send,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "../../src/lib/utils"
 import { useState } from "react";
 
 const Contacts = () => {

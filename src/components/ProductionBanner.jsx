@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from "../../src/lib/utils"
 
 const ProductionBanner = () => {
     const [isVisible, setIsVisible] = useState(true);
