@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "private": true,
-  "homepage": "https://bushraYounes.github.io/portfolio/",
+  "homepage": "https://bushraYounes.github.io/portfolio",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
