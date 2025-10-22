@@ -60,7 +60,7 @@ const Education = () => {
                                         Syrian Virtual University
                                     </p>
                                     <p className="text-muted-foreground ">
-                                        Online, 2/2022 - Until now
+                                        Online, 2/2024 - Until now
                                     </p>
                                 </div>
                             </div>
