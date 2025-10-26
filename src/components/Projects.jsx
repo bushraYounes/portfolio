@@ -3,6 +3,13 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import project1 from "../assets/projects/project11.jpg"
 import project2 from "../assets/projects/project2.jpg"
 import project5 from "../assets/projects/project5.jpg"
+import project6 from "../assets/projects/mushroom.jpg"
+import project7 from "../assets/projects/soldier2.jpg"
+import project8 from "../assets/projects/project8.jpg"
+import project9 from "../assets/projects/jwt.jpg"
+import project10 from "../assets/projects/ems.jpg"
+import project11 from "../assets/projects/lms.jpg"
+
 const projects = [
   {
     id: 1,
@@ -18,7 +25,7 @@ const projects = [
     title: "Villa Website",
     description:
       "A modern real estate website built with React for browsing luxury villas and vacation homes. Features property listings, detailed views, pricing information, but still need some css fixing.",
-    image:project2,
+    image: project2,
     tags: ["JavaScript", "React", "SCSS"],
     demoUrl: "https://bushrayounes.github.io/FrontEnd_Task1_villa_website/",
     githubUrl: "https://github.com/bushraYounes/FrontEnd_Task1_villa_website",
@@ -26,18 +33,55 @@ const projects = [
   {
     id: 3,
     title: "3D Mushroom in Blender",
-    description:"A detailed 3D mushroom model created using Blender, showcasing professional modeling techniques and material work, using skills like 3D Modeling, Shading, Texturing and Rendering.",
-    image: project5,
+    description: "A detailed 3D mushroom model created using Blender, showcasing professional modeling techniques and material work, using skills like 3D Modeling, Shading, Texturing and Rendering, can be used in animations, games, or digital art.",
+    image: project6,
     tags: ["Blender"],
-    demoUrl: "#",
+    demoUrl: "https://skfb.ly/pCEAs",
     githubUrl: "#",
   },
-  
+  {
+    id: 4,
+    title: "3D Soldier in Blender",
+    description: "A detailed and accurate 3D model of the human body created using Blender,can be a versatile, game-ready character that is fully rigged for animation, has realistic PBR textures, and has a detailed military uniforms.",
+    image: project7,
+    tags: ["Blender", "Academic_HIAST"],
+    demoUrl: "https://skfb.ly/pCCYZ",
+    githubUrl: "#",
+  },
+  {
+    id: 5,
+    title: " 3D Representation of Cites using Unity",
+    description: "3D simulation system of a specific location, using its Geospatial data. Where we processed this data and got the information that specify the road map and buildings locations in this place, and integrating it with the height data for this area, and then texturing it with real - life texture.",
+    image: project8,
+    tags: ["Unity", "Academic_HIAST"],
+    demoUrl: "https://drive.google.com/drive/folders/1_Jg0OurIza0lDDW1GBioTmWQoMHX61fW?usp=sharing",
+    githubUrl: "https://github.com/bushraYounes/3D-simulation-system-of-a-specific-location-using-Unity",
+  },
+  {
+    id: 6,
+    title: "Employee Management System",
+    description: "A basic Employee Management System (EMS) that allows for managing departments and employees within those departments. The system includes jwt auth, CRUD operations for managing departments and employees, relationships between departments and employees, and an API to interact with the system.",
+     image: project10,
+    tags: ["Laravel","PHP"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/bushraYounes/Backend_Task8_employeeManagement",
+  },
+  {
+    id: 7,
+    title: "Library Management System",
+    description: "A Library Management System using Laravel. This system manages books, authors, and users of the library, incorporating complex relationships and functionalities. With impressive documentation and Postman collection.",
+     image: project11,
+    tags: ["Laravel","PHP","Postman"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/bushraYounes/BackEnd_Task9_LibraryManagementSystem",
+  },
+   
+
 ];
 
 
 const Projects = () => {
-   return (
+  return (
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center mb-15">
@@ -45,7 +89,7 @@ const Projects = () => {
           Featured <span className="text-primary "> Projects </span>
         </h2>
 
-        
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (
@@ -76,20 +120,32 @@ const Projects = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <Github size={20} />
-                    </a>
+                    {project.githubUrl != '#' &&
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300 flex"
+                      >
+                        <Github size={20} />
+                        {project.demoUrl == '#' &&
+                          <span className='pl-2 hover:text-primary duration-300'>Review Code</span>
+                        }
+                      </a>
+
+                    }
+                    {project.demoUrl != '#' &&
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300 flex"
+                      >
+                        <ExternalLink size={20} />
+                        <span className='pl-2 hover:text-primary duration-300'>View Project</span>
+
+                      </a>}
+
+
+
                   </div>
                 </div>
               </div>

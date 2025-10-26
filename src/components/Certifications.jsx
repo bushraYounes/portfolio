@@ -84,12 +84,13 @@ const Certifications = () => {
                     <a
                       href={certification.demoUrl}
                       target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      className="text-foreground/80 hover:text-primary transition-colors duration-300 flex"
                     >
                       <ExternalLink size={20} />
+                      <span className='text-primary pl-2'>View Certificate</span>
                     </a>
 
-                    <span className='text-primary'>View Certificate</span>
+                    
                   </div>
                 </div>
               </div>
